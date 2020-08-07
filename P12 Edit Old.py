@@ -160,7 +160,7 @@ if __name__== "__main__":
 
 check_victim = input("Check places that need physiologist? Yes/No ")
 if check_victim == "Yes":    
-    df = pd.read_csv("victim_data.csv")
+    df = pd.read_csv("victim_data_old.csv")
     # Places having Strongly Negative value not 0
     victim = df.loc[df['Strongly_Negative'] != 0]
     print("\nThese Places Need Physiologist : \n",victim)
