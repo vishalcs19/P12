@@ -120,9 +120,9 @@ class SentimentAnalysis:
         #   victim.writerow([searchTerm,numTweets,strongly_positive,positive,weakly_positive,neutral,weakly_negative,negative,strongly_negative])
                 
         # append a new place info. to victim_data.csv
-        df = pd.read_csv("victim_data.csv")
+        df = pd.read_csv("victim_data_old.csv")
         df.loc[len(df)] = [searchTerm,numTweets,strongly_positive,positive,weakly_positive,neutral,weakly_negative,negative,strongly_negative]
-        df.to_csv (r'victim_data.csv', index = False, header=True)
+        df.to_csv (r'victim_data_old.csv', index = False, header=True)
         
         
         self.plotPieChart(positive, weakly_positive, strongly_positive, negative, weakly_negative, strongly_negative, neutral, searchTerm, numTweets)
